@@ -38,5 +38,5 @@ function getChannels() {
         .replace(/\r\n/g,'\n')
         .split('\n')
         .filter(channel => channel)
-        .map(channel => '#' + channel)
+        .map(channel => '#' + channel.trim())
 }
