@@ -17,11 +17,11 @@ client.on('message', (channel, tags, message, self) => {
     const date = datetime.slice(0, 10)
     const time = datetime.slice(11, 19)
 
-    if (!queue[channel]) {
+    if (!queue.hasOwnProperty(channel)) {
         queue[channel] = {}
     }
 
-    if (!queue[channel][date]) {
+    if (!queue[channel].hasOwnProperty(date)) {
         queue[channel][date] = []
     }
 
