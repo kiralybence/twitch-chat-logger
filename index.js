@@ -31,6 +31,7 @@ function getChannels() {
 
     if (!fs.existsSync(channelPath)) {
         fs.writeFileSync(channelPath, '')
+        return []
     }
 
     return fs.readFileSync(channelPath, { encoding: 'utf8', flag: 'r' })
