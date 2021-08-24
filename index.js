@@ -37,5 +37,6 @@ function getChannels() {
     return fs.readFileSync(channelPath, { encoding: 'utf8', flag: 'r' })
         .replace(/\r\n/g,'\n')
         .split('\n')
+        .filter(channel => channel)
         .map(channel => '#' + channel)
 }
