@@ -24,3 +24,5 @@ channel3
 ```bash
 npm start
 ```
+
+- The logs will be saved to the `logs` directory, with the according channel names and dates (in UTC)
